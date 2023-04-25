@@ -7,6 +7,8 @@ import (
 	"net/http"
 )
 
+// Sets up the server by registering an HTTP request handler function with http.HandleFunc().
+// The handler function renders the specified template file when the root URL is requested.
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		render(w, "test.page.gohtml")
@@ -19,6 +21,8 @@ func main() {
 	}
 }
 
+// Renders the specified template file and writes the output to an http.ResponseWriter instance.
+// The function uses template.ParseFiles() to parse all the template files required to render the page.
 func render(w http.ResponseWriter, t string) {
 
 	partials := []string{
