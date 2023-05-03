@@ -1,3 +1,3 @@
-module example.com/main
+module front-end
 
 go 1.20
